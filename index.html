@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de Órdenes por Voz con JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f4e9e9; /* Rosa pastel */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .voice-info {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .result {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #ff8ba7; /* Rosa pastel */
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Voice Order Identifier</h1>
+            <p>Identificador de Órdenes por Voz </p>
+        </div>
+        <div class="voice-info">
+            <p>Los comandos de voz que puede utilizar son:</p>
+            <ul>
+                <li>Abrir nueva pestaña.</li>
+                <li>Ir a Google.</li>
+                <li>Cerrar pestaña.</li>
+                <li>Cerrar navegador.</li>
+            </ul>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+    <footer class="footer">
+        <p>All rights reserved &copy; 2024</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
