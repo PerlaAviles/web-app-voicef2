@@ -16,19 +16,17 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Transcripción de voz:', transcript);
 
             // Ejecutar acciones según el comando de voz
-            if (transcript.includes('abrir nueva pestaña')) {
-                window.open('', '_blank');
-                resultDiv.innerHTML = '<p>Nueva pestaña abierta.</p>';
-            } else if (transcript.includes('ir a')) {
+               // Ejecutar acciones según el comando de voz
+            if (transcript.includes('abrir nueva pestaña') && !nuevaPestanaAbierta) {
+                abrirNuevaPestana();
+                nuevaPestanaAbierta = true; // Actualizar la bandera
+            } else if (transcript.includes('ir a google')) {
                 const url = obtenerUrl(transcript);
                 if (url) {
-                    window.location.href = url;
-                    resultDiv.innerHTML = `<p>Redirigiendo a <strong>${url}</strong>.</p>`;
+                    window.location.href = 'https://www.google.com';
+                    resultDiv.innerHTML = '<p>Ir a <strong>Google</strong>.</p>';
                 } else {
-                    // Redirige a la URL de Google si no se proporciona una URL válida
-                    const googleURL = 'https://www.google.com/';
-                    window.location.href = googleURL;
-                    resultDiv.innerHTML = '<p>Error: No se proporcionó una URL válida. Redirigiendo a Google.</p>';
+                    resultDiv.innerHTML = '<p>Error: No se proporcionó una URL válida.</p>';
                 }
             } else if (transcript.includes('cerrar pestaña')) {
                 window.close();
